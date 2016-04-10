@@ -1,0 +1,192 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta name="generator" content="HTML Tidy for Linux/x86 (vers 11 February 2007), see www.w3.org">
+    <style type="text/css">
+/* Adapted from main website template, which was itself based on Jon Barron http://www.cs.berkeley.edu/~barron/ */
+      a {
+      color: #1772d1;
+      text-decoration:none;
+      }
+      a:focus, a:hover {
+      color: #f09227;
+      text-decoration:none;
+      }
+      body,td,th {
+      font-family: 'Lato', Verdana, Helvetica, sans-serif;
+      font-size: 14px
+      }
+      strong {
+      font-family: 'Lato', Verdana, Helvetica, sans-serif;
+      font-size: 14px
+      }
+      heading {
+      font-family: 'Lato', Verdana, Helvetica, sans-serif;
+      font-size: 15px;
+      font-weight: 700
+      }
+    </style>
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+    <title>Show, Attend and Tell: Neural Image Caption Generation with Visual Attention</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+  </head>
+
+  <body>
+    <table width="800" border="0" align="center" cellpadding="20">
+      <tr>
+	<td>
+        <br><br>	  
+          <table width="95%" align="center" border="0" cellpadding="10">
+            <tr>
+              <td width="67%">
+		<p align="center"><font size="6">Show, Attend and Tell: Neural Image Caption Generation 
+                with Visual Attention</font></p>
+          </table>
+          <br>
+	  <p align="center"> 
+            <font size="4">
+            <a href="http://kelvinxu.github.io/" style="color: rgb(0,0,0)"><font color="000000"> Kelvin Xu*</font></a>,
+            <a href="http://www.psi.toronto.edu/?q=people" style="color: rgb(0,0,0)"><font color="000000"> Jimmy Lei Ba<sup>&dagger;</sup></font></a>,
+            <a href="http://www.cs.toronto.edu/~rkiros/" style="color: rgb(0,0,0)"><font color="000000"> Ryan Kiros<sup>&dagger;</sup></font></a>,
+            <a href="http://www.kyunghyuncho.me/" style="color: rgb(0,0,0)"><font color="000000"> Kyunghyun Cho*</font></a>,<br>
+            <a href="https://aaroncourville.wordpress.com/" style="color: rgb(0,0,0)"><font color="000000"> Aaron Courville*</font></a>,
+            <a href="http://www.cs.toronto.edu/~rsalakhu/" style="color: rgb(0,0,0)"><font color="000000"> Ruslan Salakhutdinov<sup>&dagger;</sup></font></a>,
+            <a href="http://www.cs.toronto.edu/~zemel/inquiry/home.php" style="color: rgb(0,0,0)"><font color="000000"> Richard Zemel<sup>&dagger;</sup></font></a>,
+            <a href="http://www.iro.umontreal.ca/~bengioy/yoshua_en/index.html" style="color: rgb(0,0,0)"><font color="000000"> Yoshua Bengio*</font></a>
+            </font>
+            <br>
+            <font size="3">University of Toronto<sup>&dagger;</sup>/University of Montreal*</font>
+          </p>
+          <br>
+          <!-- TODO add school logos-->
+	  
+	  <p align="left"><font size="5"> Overview</font></p>
+	  <ul>
+          Image caption generation is the problem of generating a descriptive
+          sentence of an image. The fact that humans (e.g you) can do this with
+          remarkable ease makes this a very interesting/challenging problem for
+          AI, combining aspects of computer vision (in particular scene
+          understanding) and natural language processing. 
+          <br><br>
+          In this work, we introduced an "attention" based framework into the
+          problem of image caption generation. Much in the same way human
+          vision fixates when you perceive the visual world, the model learns
+          to "attend" to selective regions while generating a description.
+          Furthermore, in this work we explore and compare two variants of this model:
+          a deterministic version trainable using standard backpropagation techniques and
+          a stochastic variant trainable by maximizing a variational lower bound. 
+          </ul> 
+          <br> 
+          <p align="left"><font size="5">How does it work?</font></p>
+	  <ul>
+          The model brings together convolutional neural networks, recurrent neural networks
+          and work in modeling attention mechanisms.
+          </ul>
+
+          <p align="center">
+              <img src="diags/model_diag.png" align="middle" width="500" alt="model_diagram">
+              <div class="caption" style="margin: 0 auto; width: 450; text-align: center;"> <font size="2"> <i><b>Above:</b> From a high level, the model uses a convolutional neural network as a feature extractor, then uses a recurrent neural network with attention to generate the sentence. </i></font></div>
+          <p>
+          <ul>
+          If you are not familiar with these things, you can think of the convolutional network as 
+          an function encoding the image ('encoding' = <i>f</i>(image)), the attention mechanism as grabbing a
+          portion of the image ('context' = <i>g</i>(encoding)), and the recurrent network a word
+          generator that receives a context at every point in time ('word' = <i>l</i>(context)).
+          <br><br>
+          For a roadmap and a collection of material explaining some of the networks used in this work, see the following
+          on <a href="http://www.metacademy.org/graphs/concepts/convolutional_nets">convolutional</a>
+          and <a href="http://www.metacademy.org/graphs/concepts/recurrent_neural_networks">recurrent</a>
+          neural networks. 
+          </ul> <br>
+
+	  <p align="left"><font size="5">The model in action</font></p>
+
+            <div class="row">
+                <div class="col-sm-3">
+                    <img src="gifs/24976.gif" height="210" width="280">
+                    <br>
+                </div>
+                <div class="col-sm-3">
+                    <img src="gifs/11485.gif" height="210" width="280">
+                    <br>
+                </div>
+                    <div class="col-sm-3">
+                    <img src="gifs/1294.gif" height="210" width="280">
+                    <br>
+                </div>
+                <div class="col-sm-3">
+                    <img src="gifs/13936.gif" height="210" width="280">
+                    <br>
+                </div>
+             </div>
+
+            <div class="row">
+                <div class="col-sm-3">
+                    <img src="gifs/4028.gif" height="210" width="280">
+                    <br>
+                </div>
+                <div class="col-sm-3">
+                    <img src="gifs/7288.gif" height="210" width="280">
+                    <br>
+                </div>
+                    <div class="col-sm-3">
+                    <img src="gifs/7600.gif" height="210" width="280">
+                    <br>
+                </div>
+                <div class="col-sm-3">
+                    <img src="gifs/8643.gif" height="210" width="280">
+                    <br>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-3">
+                    <img src="gifs/14308.gif" height="210" width="280">
+                    <br>
+                </div>
+                <div class="col-sm-3">
+                    <img src="gifs/15507.gif" height="210" width="280">
+                    <br>
+                </div>
+                    <div class="col-sm-3">
+                    <img src="gifs/16118.gif" height="210" width="280">
+                    <br>
+                </div>
+                <div class="col-sm-3">
+                    <img src="gifs/17462.gif" height="210" width="280">
+                    <br>
+                </div>
+            </div>
+
+          <br><br>
+	  <p align="left"><font size="5"> Want all details? Interested in what else we've been up to?</font></p>
+          Please check out the following technical report and visit the pages of the authors:
+              <br>
+                <ul>
+                <a href="http://arxiv.org/abs/1502.03044"> Show, Attend and Tell: Neural Image Caption Generation with Visual Attention (2015)</a> <br>
+                <a href="http://kelvinxu.github.io/"> K. Xu </a>, 
+                <a href="http://www.psi.toronto.edu/?q=people"> J. Ba</a>,
+                <a href="http://www.cs.toronto.edu/~rkiros/"> R. Kiros</a>,
+                <a href="http://www.kyunghyuncho.me/"> K. Cho</a>, 
+                <a href="https://aaroncourville.wordpress.com/"> A. Courville</a>, 
+                <a href="http://www.cs.toronto.edu/~rsalakhu/"> R. Salakhutdinov</font></a>,
+                <a href="http://www.cs.toronto.edu/~zemel/inquiry/home.php"> R. Zemel</a>, 
+                <a href="http://www.iro.umontreal.ca/~bengioy/yoshua_en/index.html"> Y. Bengio</a>
+                <br>
+                Or contact <a href="mailto:kelvin.xu@umontreal.ca"> us</a>
+                </ul>	  
+          <br>
+	  <p align="left"><font size="5">Code</font></p>
+          <ul>
+          <a href="https://github.com/kelvinxu/arctic-captions">[code]</a>
+          </ul>
+	  <br>
+  </body>
+  </html>
