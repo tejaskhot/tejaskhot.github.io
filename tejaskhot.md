@@ -4,10 +4,10 @@ permalink: /tejaskhot/index.html
 title: Tejas S Khot
 tags: [Tejas,Khot,tjskhot,tejaskhot]
 image:
-  feature: Tejas-Khot.jpg
+  feature: tejas-khot-plane.jpg
 ---
 <figure>
-  <img src="{{ site.url }}/images/tejas-khot.jpg" alt="Tejas S Khot">
+  <img src="{{ site.url }}/images/tejas-khot-plane.jpg" alt="Tejas S Khot">
   <figcaption>Tejas S Khot</figcaption>
 </figure>
 
