@@ -1,350 +1,191 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-
+<!DOCTYPE html>
 <html>
-  <head>
-    <meta name="generator" content="">
-    <style type="text/css">
-/* Layout and HTML pieces the work of Jon Barron http://www.cs.berkeley.edu/~barron/ */
-      a {
-      color: #1772d1;
-      text-decoration:none;
-      }
-      a:focus, a:hover {
-      color: #f09227;
-      text-decoration:none;
-      }
-      body,td,th {
-      font-family: 'Lato', Verdana, Helvetica, sans-serif;
-      font-size: 14px
-      }
-      strong {
-      font-family: 'Lato', Verdana, Helvetica, sans-serif;
-      font-size: 14px
-      }
-      heading {
-      font-family: 'Lato', Verdana, Helvetica, sans-serif;
-      font-size: 15px;
-      font-weight: 700
-      }
-    </style>
-    <link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-    <title>Tejas S Khot</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+<head>
+  <title>Tejas Khot</title>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,‌​100italic,300,300ita‌​lic,400italic,500,50‌​0italic,700,700itali‌​c,900italic,900' rel='stylesheet' type='text/css'>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.0.0/bootstrap-social.min.css" />
+  <script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<style type="text/css">
+.blinking-cursor {
+  font-weight: 200;
+  font-size: 20px;
+  color: #2E3D48;
+  -webkit-animation: 1s blink step-end infinite;
+  -moz-animation: 1s blink step-end infinite;
+  -ms-animation: 1s blink step-end infinite;
+  -o-animation: 1s blink step-end infinite;
+  animation: 1s blink step-end infinite;
+}
 
-    <!-- Google Analytics -->
-    <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+@keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: white;
+  }
+}
 
-    ga('create', 'UA-76678346-1', 'auto');
-    ga('send', 'pageview');
+@-moz-keyframes blink {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: white;
+  }
+}
 
-    </script>
+@-webkit-keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: white;
+  }
+}
 
+@-ms-keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: white;
+  }
+}
 
-  </head>
+@-o-keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: white;
+  }
+}
+.navbar{
+  background-color: #302C2F !important;
+  font-size: 16px;
+}
 
-  <body>
-    <table width="850" border="0" align="center" cellpadding="20">
-      <tr>
-	<td>
-          <table width="100%" align="center" border="0" cellpadding="10">
-            <tr>
-              <td width="67%" valign="middle">
-		<p align="center"><font size="6">Tejas S Khot</font></p>
-		<p align="justify">
-                    I completed my Bachelors from <a href="http://mu.ac.in/portal/">University of Mumbai, India</a>,
-                    majoring in Computer Engineering. I am interested in the research areas of machine learning (deep learning) and multi-modal artificial intelligence, particularly as applied to computer vision and natural language processing, and want to explore their relevance in a wider Robotics context. I am particularly interested in understanding the cognitive abilities of humans with regards perception which encompasses several closely tied areas of study. I want to study how intelligence emerges from raw data and its multi-modal associations with memory,
-                    perception and action. Embodied Cognition hypothesis, the idea that cognition is strongly influenced by aspects of an agent's body beyond the brain itself, has long excited me. At some point in my academic career I wish to explore these and some of the other larger
-                    goals of Artificial Intelligence.
+/*@media only screen and (min-width: 900px) {*/
+.navbar-fixed-top {
+  height: 35px !important;
+  min-height:10px;
+}
 
-                    <br><br>
+body{
+  background: white;
+  color: black;
+  font-weight: 300;
+  font-family: 'Roboto', sans-serif;
+}
 
-                    Since July 2016, I am working as a Research Scholar with <a href="https://filebox.ece.vt.edu/~dbatra/">Dr. Dhruv Batra</a> and
-                    <a href="https://filebox.ece.vt.edu/~parikh/">Dr. Devi Parikh</a> who lead the
-                    <a href="https://mlp.ece.vt.edu/">Machine Learning and Perception Lab</a> and
-                    <a href="https://filebox.ece.vt.edu/~parikh/CVL.html">Computer Vision Lab</a>
-                    respectively at <b>Virgina Tech</b> [<i> <b>Update Aug 2016</b> : My advisors have moved to Georgia Tech and are currently spending a year at Facebook AI Research as Visiting Researchers</i>]. 
-                    For complex tasks such as <a href="http://visualqa.org/">Visual Question Answering</a>,
-                    language provides a strong prior that can often result in good superficial performance, without the underlying models
-                    truly understanding the visual content. My current research focuses on addressing this bias and on ways to improve
-                    the grounding of concepts from language and visuals.
-                    <br><br>
-<!-- 
-                    I am also collaborating with <a href="http://www.sarathchandar.in/">Sarath Chandar</a>, PhD student at
-                    <b>Universit&eacute; de Montr&eacute;al</b>, on the task of Knowledge Base Completion using Deep Learning.
-                    <br><br>
-                    <br><br> -->
-		</p>
-		<p align=center>
-		  <a href="mailto:tjskhot@vt.edu">Email</a> /
-                  <a href="https://github.com/tejaskhot">GitHub</a> /
-                  <a href="https://in.linkedin.com/in/tejaskhot">LinkedIn</a> /
-                  <a href="https://www.facebook.com/tjskhot">Facebook</a> /
-                  <a href="https://twitter.com/tjskhot">Twitter</a> /
-		</p>
-              </td>
-              <td width="20%">
-              <br>
-              <br>
-		<img width="175"
-                     src="images/tejas_khot.jpeg"
-                     alt="Tejas Khot">
-	      </td>
-            </tr>
-          </table>
+.title_bar_text{
+  margin-left: 15px;
+  color: white;
+}
 
+h1,h2,h3, h4{
+  font-weight: 300;
+}
+.content_heading{
+  margin-left: 5px;
+}
+.content{
+  margin-left: 30px;
+}
+.main_content{
+  margin-top: 40px;
+}
+.section_heading{
+  padding-top: 40px;
+}
+img{
+  vertical-align: middle !important;
+}
 
-          <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-            <tr>
-              <td>
-                <hr>
-                <font size="5">Academic Life</font>
-              </td>
-            </tr>
-          </table>
+p{
+  font-size: 16px;
+}
+#news_list li, #achievements_list li{
+  font-size: 16px;
+  font-weight: 300;
+}
 
-	  <table width="100%" align="center" border="0" cellpadding="20">
+.contact_div{
+  margin-bottom: 30px;
+}
 
-      <tr>
-        <td width="25%" valign="top">
-          <img src="images/vqa_examples.jpg" width="250" style="border-style: none">
-        </td>
-        <td width="75%" valign="top">
-          <p>
-              <b>Making the V in VQA Matter: Elevating the Role of Image Understanding in Visual Question Answering</b><br>
-              We propose to counter language priors in the dataset for the task of Visual Question Answering (VQA) and make vision (the V in VQA) matter! Specifically, we balance the popular VQA dataset (Antol et al., ICCV 2015) by collecting complementary images such that every question in our balanced dataset is associated with not just a single image, but rather a pair of similar images that result in two different answers to the question. Our dataset is by construction more balanced than the original VQA dataset and has approximately twice the number of image-question pairs.<br>
-              Our data collection protocol for identifying complementary images enables us to develop a novel interpretable model, which in addition to providing an answer to the given (image, question) pair also provides a counter-example based explanation - specifically, it identifies an image that is similar to the original image, but it believes has a different answer to the same question. This can help in building trust for machines among their users.<br>
-              <a href="https://arxiv.org/abs/1612.00837">[arxiv] </a>
-              <a href="http://www.visualqa.org/vqa_v2.html">[Project Page] </a>
-              <a href="https://www.youtube.com/watch?v=nMr_sSAMpkE">[YouTube Demo] </a>
-              <a href="">[Code coming soon!]</a>
-          </p>
-        </td>
-      </tr>
-      <tr>
-        <td width="25%" valign="top">
-          <img src="images/VT_Logo.png" width="250" style="border-style: none">
-        </td>
-        <td width="75%" valign="top">
-          <p>
-              <b>Teaching Assistant - (Advanced) Introduction to Machine Learning, Virginia Tech, Fall 2016</b><br>
-              I am currently working as a Teaching Assistant for the (Advanced) Introduction to Machine Learning Course(Fall 2016: ECE 5424) with Dr. Stefan Lee. I am responsible for setting up Kaggle competitions, curating homeworks and grading them.<br>
-              <a href="https://filebox.ece.vt.edu/~f16ece5424/">[Course webpage]</a>
-          </p>
-        </td>
-      </tr>
-      <!-- <tr>
-          <b>&nbsp &nbsp Undergraduate Thesis &nbsp &nbsp &nbsp &nbsp| &nbsp &nbsp &nbsp Action Based Cognition :
-           Embodied Cognitive Robotics</b><br>
-           <b>&nbsp &nbsp<i>Advisor : &nbsp</i></b> <a href="http://www.hbcse.tifr.res.in/people/academic/nagarjuna-g/nagarjuna-g"> Dr.
-           Nagarjuna G. </a>
-           , <i>Tata Institute of Fundamental Research</i><br><br>
-          Embodied cognition, the idea that the mind is not only connected to the body but that the body influences the mind, is
-          one of the more counterintuitive ideas in cognitive science. The embodied cognition hypothesis is the idea that cognition
-          is mediated by representations expressed in the vocabulary and format of sensory and motor representations. The core of the
-          embodied cognition hypothesis is the claim that the format of cognitive representations is modality-specific and not abstract
-          or amodal. The question that implicitly drives most research and discussion is: Why is the sensorimotor system activated
-          during tasks that do not overtly require sensorimotor processing? As a part of this exploratory thesis, taking the approach of
-          epigenetic robotics, we propose that cognitive process is linked with motor actions and is proprioceptive. According to this model,
-          there is no unconscious perception and all seeing is seeing as and cause of perception is conscious action. We show, via
-          simulations, how fundamental components of vision such as edge detection, depth perception and relative placement of objects in
-          a scene can be solved with minimal computation in the presence of motor actions.
-      </tr> -->
-      <tr>
-        <td width="25%" valign="top">
-          <img src="images/darwin_walk.jpg" width="250" style="border-style: none">
-        </td>
-        <td width="75%" valign="top">
-          <p>
-              <b>&nbsp &nbsp Undergraduate Thesis &nbsp &nbsp &nbsp &nbsp| &nbsp &nbsp &nbsp Action Based Cognition :
-               Embodied Cognitive Robotics</b><br>
-               <b>&nbsp &nbsp<i>Advisor : &nbsp</i></b> <a href="http://www.hbcse.tifr.res.in/people/academic/nagarjuna-g/nagarjuna-g"> Dr.
-               Nagarjuna G. </a>
-               , <i>Tata Institute of Fundamental Research</i><br><br>
-              Embodied cognition, the idea that the mind is not only connected to the body but that the body influences the mind, is
-              one of the more counterintuitive ideas in cognitive science. The embodied cognition hypothesis is the idea that cognition
-              is mediated by representations expressed in the vocabulary and format of sensory and motor representations. The core of the
-              embodied cognition hypothesis is the claim that the format of cognitive representations is modality-specific and not abstract
-              or amodal. The question that implicitly drives most research and discussion is: Why is the sensorimotor system activated
-              during tasks that do not overtly require sensorimotor processing? As a part of this exploratory thesis, taking the approach of
-              epigenetic robotics, we propose that cognitive process is linked with motor actions and is proprioceptive. According to this model,
-              there is no unconscious perception and all seeing is seeing as and cause of perception is conscious action. We show, via
-              simulations, how fundamental components of vision such as edge detection, depth perception and relative placement of objects in
-              a scene can be solved with minimal computation in the presence of motor actions.
-          </p>
-        </td>
-      </tr>
-      <tr>
-        <td width="25%" valign="top">
-          <img src="images/dlss_2016.jpg" width="250" style="border-style: none">
-        </td>
-        <td width="75%" valign="top">
-          <p>
-              <b>Deep Learning Summer School - DLSS 2016, Montr&eacute;al</b><br>
-              I was selected to attend DLSS.<br>
-              <a href="https://sites.google.com/site/deeplearningsummerschool2016/">[DLSS Montr&eacute;al]</a>
-          </p>
-        </td>
-      </tr>
-      <tr>
- 	    <tr>
-	      <td width="25%" valign="top">
-		      <img src="images/destin.png" width="250" style="border-style: none">
-	      </td>
-	      <td width="75%" valign="top">
-      		<p>
-              <b>Google Summer of Code 2015 &nbsp &nbsp | &nbsp &nbsp The OpenCog Foundation</b><br>
-              <b><i>Mentor : &nbsp</i></b> Yuhuang Hu, <a href="http://wp.goertzel.org/"> Dr. Ben Goertzel </a><br><br>
-              Deep SpatioTemporal Inference Network (DeSTIN) is a scalable deep learning architecture that relies on a combination of
-               unsupervised learning and Bayesian inference. The paper <a href="http://web.eecs.utk.edu/~itamar/Papers/BICA2009.pdf">
-              DeSTIN: A Scalable Deep Learning Architecture with Application to High-Dimensional Robust Pattern Recognition</a> by
-              <i>Itamar Arel, Derek Rose,</i> and <i>Robert Coop</i> describes this method.
-              Briefly put, DeSTIN uses online clustering algorithms to hierarchically create cetroids in a way that loosely mimics the
-              way humans understand things. In the DeSTIN architecture a hierarchy of layers is used, where each layer consists of
-              multiple instantiations of an identical circuit or node which follow a defined spatial orientation for imaging
-              applications (generally speaking, however, the spatial relationship can vary according to the problem domain).
-              Each node learns to generalize and represent a temporal sequence of observations through unsupervised learning.
-              I implemented a new flavor of DeSTIN based on Stacked Convolutional Auto-encoders and tested on CIFAR-10 and CIFAR-100
-              datasets.<br>
-              <a href="http://wiki.opencog.org/wikihome/index.php/Deep_Learning_Perception_in_OpenCog">[project details]</a>&nbsp
-              <a href="https://github.com/opencog/python-destin">[code]</a>&nbsp
-              <a href="https://www.google-melange.com/gsoc/project/details/google/gsoc2015/tejas_khot/5741031244955648">[GSOC Page]</a>
-      		</p>
-	      </td>
-	    </tr>
-      <tr>
-        <td width="25%" valign="top">
-          <img src="images/conv_autoencoder.png" width="250" style="border-style: none">
-        </td>
-        <td width="75%" valign="top">
-          <p>
-              <b>Research Intern, 2015 &nbsp &nbsp | &nbsp &nbsp Advanced Robotics Lab, University of Malaya</b>
-              <b><i>Advisor : &nbsp</i></b><a href="https://umexpert.um.edu.my/ckloo-um"> Dr. Loo Chu Kiong</a><br><br>
-              I worked on using <a href="http://minds.jacobs-university.de/conceptors">conceptor networks</a> to improve image
-              classification performance on datasets like MNIST, CIFAR-10, CIFAR-100. I also used Stacked Convolutional Auto-encoders and
-              spherical clustering, alongside hierarchical architectures like DeSTIN, for learning temporal dependencies in videos on
-              datasets like KTH.
-          </p>
-        </td>
-      </tr>
-      <tr>
-        <td width="25%" valign="top">
-          <img src="images/mlss_kyoto.png" width="250" style="border-style: none">
-        </td>
-        <td width="75%" valign="top">
-          <p>
-              <b>Machine Learning Summer School - MLSS 2015, Kyoto</b><br>
-              I was selected to attend MLSS with full scholarship. This was a fun intoduction to some very diverse topics in Machine Learning. 
-              A lot of the material was new to me and it was
-              nice to learn about some advanced topics like Submodular Functions, Selective Inference, Concentration Inequalities, Stochastic
-              Optimization and the like.<br>
-              <a href="http://www.i.kyoto-u.ac.jp/mlss15/">[MLSS Kyoto]</a>
-          </p>
-        </td>
-      </tr>
-      <tr>
-        <td width="25%" valign="top">
-          <img src="images/lps_x.png" height="200" width="150" style="border-style: none">
-        </td>
-        <td width="75%" valign="top">
-          <p>
-              <b>Lectures on Probability and Stochastic Processes X </b><br>
-              I was selected to attend, with scholarship, the 2015 LPS series on <i>Markov chains: Mixing time, cover time, and rate of escape</i> by <i>Yuval Peres, Microsoft Research,
-              Redmond</i>. This was a good mathematical extension to the limited material usually taught about Markov Chains in ML courses.<br>
-              <a href="http://www.isid.ac.in/~lps16/PastWebsites/LPS10/index.php">[LPS X]</a>
-          </p>
-        </td>
-      </tr>
-      <tr>
-        <td width="25%" valign="top">
-          <img src="images/xrds.png" width="250" style="border-style: none">
-        </td>
-        <td width="75%" valign="top">
-          <p>
-              <b>ACM XRDS : The ACM Magazine for Students</b><br>
-              From April 2015 - July 2016, I was the department head of the <b>Pointers</b> section of the magazine since April 2015.<br>
-              In July 2016, I was promoted to the position of department head of the <b>Hello World</b> section.<br>
-              <a href="http://xrds.acm.org/">[ACM XRDS]</a> &nbsp
-              <a href="http://xrds.acm.org/get-involved.cfm">[Get Involved]</a>
-              <a href="https://github.com/acmxrds">[Github Repository]</a>
-          </p>
-        </td>
-      </tr>
-      <tr>
-        <td width="25%" valign="top">
-          <img src="images/mit_di.png" width="250" style="border-style: none">
-        </td>
-        <td width="75%" valign="top">
-          <p>
-              <b>MIT Media Lab : Design Innovation Workshop 2015</b><br>
-              A week of DIY hacking as a part of the <i>Smart Textiles</i> track. I worked on two interesting projects:
-              <ul>
-                <li><b>Singing Curtains</b> : Flat fabric speakers made out of embroidered highly conductive thread and neodymium magnets which can be
-                embedded in any textile garment.</li>
-                <li><b>Fabric moisture sensor</b> : One of its kind fabric moisture sensor which detects wetness of fabric and wirelessly transmits
-                messages indicating moisture content. It not only detects moisture but also measures it.</li>
-              </ul>
-              <br>
-              <a href="http://india.media.mit.edu/">[MIT DI India]</a> &nbsp
-          </p>
-        </td>
-      </tr>
-      <tr>
-        <td width="25%" valign="top">
-          <img src="images/invenzone.png" width="250" style="border-style: none">
-        </td>
-        <td width="75%" valign="top">
-          <p>
-              <b>Software Development Intern | InvenZone</b><br>
-              Generated regression based statistical models for time series approximation and predictive analytics. Experimented with an image
-              classification / object detection model.<br>
-              <a href="http://www.invenzone.com/">[InvenZone]</a>
-          </p>
-        </td>
-      </tr>
-      <tr>
-        <td width="25%" valign="top">
-          <img src="images/silver_leaf_caps.png" width="250" style="border-style: none">
-        </td>
-        <td width="75%" valign="top">
-          <p>
-              <b>Software Development Intern | Silver Leaf Capital Services</b><br>
-              Developed a predictive model to predict stock splits in NSE(India) and BSE with over 90% accuracy. Designed and developed a prototype
-              for stock portfolio management system.<br>
-              <a href="http://www.silverleafcaps.com/">[Silver Leaf Caps]</a>
-          </p>
-        </td>
-      </tr>
-      <tr>
-        <td width="25%" valign="top">
-          <img src="images/iimun.png" width="150" height="140" style="border-style: none">
-        </td>
-        <td width="75%" valign="top">
-          <p>
-              <b>Assistant Director | Indian International Model United Nations (IIMUN)</b><br>
-              I was among the board of directors of IIMUN and in August 2012 we organised Asia's largest youth conference.
-              I lead the coordination council, a team of over 300 fellow students; worked in the marketing and delegate relations departments 
-              leading to a 1.5x increase in the total participation and conducted training sessions on speech delivery and MUN skills for hundreds of students.<br>
-              <a href="http://www.iimun.in/">[IIMUN]</a>
-          </p>
-        </td>
-      </tr>
-          </table>
+.project_list{
+  margin-bottom: 20px;
+}
+.panel{
+  margin-bottom: 0px;
+}
+.navbar-right li{
+  color: white;
+}
+</style>
+<body>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand active" href="#">Tejas Khot</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Select Projects</a></li>
+        <li><a href="#miscellaneous">Miscellaneous</a></li>
+        <li><a href="#contact">Contact Me</a></li>
+        <li><a href="/static/docs/Tejas_Khot_Resume.pdf" target="_blank">Resume</a></li>
+      </ul>
+    </div>
+  </nav>
+  <nav class="navbar navbar-fixed-top">
+    <ul class="nav navbar-nav">
+      <li class="title_bar_text">
+      <span>tejas@cyborg:~$</span>
+      <span> ~/home/tejas/resume</span>
+      <span class="blinking-cursor">|</span></li>
+    </ul>
+  </nav>
+  <div class="container main_content">
+    <h1 align="center">Tejas Khot</h1>
+    <p align="center"><a target="_blank" href="http://github.com/tejaskhot">@tejaskhot</a></p>
+    <div align="center">
+      <img src="/static/img/tejas_khot.jpeg" height="300px;">
+    </div>
+    <h2 align="center">Goal Digger  |  On a quest to understand and solve intelligence</h2>
+    <div id="about"></div>
+    <div id="news"></div>
+    <div id="experience"></div>
+    <div id="skills"></div>
+    <div id="projects"></div>
+    <div id="miscellaneous"></div>
+    <div id="contact"></div>
+  </div>
 
-          <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-            <tr>
-              <td>
-                <br>
-                <p align="right"><font size="2">
-                  <a href="http://www.cs.berkeley.edu/~barron/">(Like the layout? This is where it started!)</a>
-                  </font>
-                </p>
-              </td>
-            </tr>
-          </table>
-    </table>
-  </body>
+  <div class="panel">
+    <div class="panel-footer" align="center">&#9400; Tejas Khot</div>
+  </div>
+
+  <script type="text/javascript">
+    $( document ).ready(function() {
+      $("#about").load("about.html"); 
+      $("#news").load("news.html"); 
+      $("#experience").load("experience.html"); 
+      $("#skills").load("skills.html"); 
+      $("#projects").load("projects.html"); 
+      $("#miscellaneous").load("miscellaneous.html"); 
+      $("#contact").load("contact.html");
+    });
+  </script>
+</body>
 </html>
