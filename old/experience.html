@@ -1,0 +1,133 @@
+<div class="row section_heading">
+    <h2 ><a target="_blank" href="#experience">Experience</a></h2>
+
+  <div class="row project_list">
+    <div class="col-md-9">
+      <h3 class="content_heading">Research Scholar, <a target="_blank" href="https://mlp.ece.vt.edu">Machine Learning and Perception Lab, Virginia Tech</a></h3>
+        <p><i> Advisors : <a target="_blank" href="https://filebox.ece.vt.edu/~dbatra/">Dr. Dhruv Batra</a>, <a target="_blank" href="https://filebox.ece.vt.edu/~parikh/">Dr. Devi Parikh</a></i></p><br>
+        <p class="content">I am working at the intersection of computer vision and natural language processing; specifically, applying deep learning to <a target="_blank" href="https://www.visualqa.org/">Visual Question Answering</a>.
+                <br><br>
+                [Joint first author] <b>Making the V in VQA Matter: Elevating the Role of Image Understanding in Visual Question Answering</b><br>
+                <font color="red"><i>Accepted as a poster at CVPR 2017</i></font><br>
+                We propose to counter language priors in the dataset for the task of Visual Question Answering (VQA) and make vision (the V in VQA) matter! Specifically, we balance the popular VQA dataset (Antol et al., ICCV 2015) by collecting complementary images such that every question in our balanced dataset is associated with not just a single image, but rather a pair of similar images that result in two different answers to the question. Our dataset is by construction more balanced than the original VQA dataset and has approximately twice the number of image-question pairs.<br>
+                Our data collection protocol for identifying complementary images enables us to develop a novel interpretable model, which in addition to providing an answer to the given (image, question) pair also provides a counter-example based explanation - specifically, it identifies an image that is similar to the original image, but it believes has a different answer to the same question. This can help in building trust for machines among their users.<br>
+                <a target="_blank" href="https://arxiv.org/abs/1612.00837">[arxiv] </a>&nbsp
+                <a target="_blank" href="https://www.visualqa.org">[Project Page] </a>&nbsp
+                <a target="_blank" href="https://www.youtube.com/watch?v=nMr_sSAMpkE">[YouTube Demo] </a>&nbsp
+                <a target="_blank" href="">[Code coming soon!]</a>
+                <br><br>
+                [Teaching Assistant] <b>(Advanced) Introduction to Machine Learning, Virginia Tech, Fall 2016</b><br>
+                I was a Teaching Assistant for the (Advanced) Introduction to Machine Learning Course(Fall 2016: ECE 5424) taught by <a target="_blank" href="https://computing.ece.vt.edu/~steflee/">Dr. Stefan Lee</a>. I was responsible for setting up Kaggle competitions, curating homeworks and grading them.<br>
+                <a target="_blank" href="https://filebox.ece.vt.edu/~f16ece5424/">[Course webpage]</a>
+        </p>
+    </div>
+    <div class="col-md-3" align="center">
+      <img src="static/img/vt.jpg" width="150px" height="120px">
+      <!-- <img src="static/img/vqa_logo.png" width="150px" height="60px"> -->
+      <p>(July 2016 - Present)</p>
+    </div>
+  </div>
+
+  <div class="row project_list">
+    <div class="col-md-9">
+      <h3 class="content_heading">Research Intern, <a target="_blank" href="https://arl.fsktm.um.edu.my/">Advanced Robotic Lab, University of Malaya</a></h3>
+        <p><i> Advisor : <a target="_blank" href="https://umexpert.um.edu.my/ckloo-um">Dr. Chu Kiong Loo</a></i></p><br>
+        <p class="content">I worked on using <a href="https://minds.jacobs-university.de/conceptors">conceptor networks</a> to improve image
+              classification performance on datasets like MNIST, CIFAR-10, CIFAR-100. I also used Stacked Convolutional Auto-encoders and
+              spherical clustering, alongside hierarchical architectures like DeSTIN, for learning temporal dependencies in videos on
+              datasets like KTH.
+        </p>
+    </div>
+    <div class="col-md-3" align="center">
+      <img src="static/img/um.png" width="150px" height="120px">
+      <!-- <img src="static/img/conv_autoencoder.png" width="150px" height="70px"> -->
+      <p>(June 2015 - July 2015)</p>
+    </div>
+  </div>
+
+  <div class="row project_list">
+    <div class="col-md-9">
+      <h3 class="content_heading">Software Developer, <a target="_blank" href="https://opencog.org/">The OpenCog Foundation, Google Summer of Code 2015</a></h3>
+        <p><i> Advisors : <a target="_blank" href="https://wp.goertzel.org/">Dr. Ben Goertzel</a>, <a target="_blank" href="https://dgyblog.com/">Yuhuang Hu</a></i></p><br>
+        <p class="content">Deep SpatioTemporal Inference Network (DeSTIN) is a scalable deep learning architecture that relies on a combination of
+               unsupervised learning and Bayesian inference. The paper <a href="https://web.eecs.utk.edu/~itamar/Papers/BICA2009.pdf">
+              DeSTIN: A Scalable Deep Learning Architecture with Application to High-Dimensional Robust Pattern Recognition</a> by
+              <i>Itamar Arel, Derek Rose,</i> and <i>Robert Coop</i> describes this method.
+              Briefly put, DeSTIN uses online clustering algorithms to hierarchically create cetroids in a way that loosely mimics the
+              way humans understand things. In the DeSTIN architecture a hierarchy of layers is used, where each layer consists of
+              multiple instantiations of an identical circuit or node which follow a defined spatial orientation for imaging
+              applications (generally speaking, however, the spatial relationship can vary according to the problem domain).
+              Each node learns to generalize and represent a temporal sequence of observations through unsupervised learning.
+              I implemented a new flavor of DeSTIN based on Stacked Convolutional Auto-encoders and tested on CIFAR-10 and CIFAR-100
+              datasets achieving a 21% improvement in accuracy and 6x speedup in computation time over the previous architecture.<br>
+              <a href="https://wiki.opencog.org/wikihome/index.php/Deep_Learning_Perception_in_OpenCog">[project details]</a>&nbsp
+              <a href="https://github.com/opencog/python-destin">[code]</a>&nbsp
+              <a href="https://www.google-melange.com/gsoc/project/details/google/gsoc2015/tejas_khot/5741031244955648">[GSoC Page]</a>
+        </p>
+    </div>
+    <div class="col-md-3" align="center">
+      <img src="static/img/gsoc2015.jpg" width="140px" height="120px">
+      <!-- <img src="static/img/destin.png" width="140px" height="120px"> -->
+      <p>(May 2015 - Sept 2015)</p>
+    </div>
+  </div>
+
+  <div class="row project_list">
+    <div class="col-md-9">
+      <h3 class="content_heading">Technical Writer, <a target="_blank" href="https://xrds.acm.org/">ACM XRDS : The ACM Magazine for Students</a></h3>
+        <p class="content">From April 2015 - July 2016, I was the department head of the <b>Pointers</b> section of the magazine since April 2015.<br>
+              In July 2016, I was promoted to the position of department head of the <b>Hello World</b> section.<br>
+              <a href="https://xrds.acm.org/">[ACM XRDS]</a> &nbsp
+              <a href="https://xrds.acm.org/get-involved.cfm">[Get Involved]</a> &nbsp
+              <a href="https://github.com/acmxrds">[Github Repository]</a>
+        </p>
+    </div>
+    <div class="col-md-3" align="center">
+      <img src="static/img/xrds.jpg" width="150px" height="120px">
+      <p>(April 2015 - Present)</p>
+    </div>
+  </div>
+
+  <div class="row project_list">
+    <div class="col-md-9">
+      <h3 class="content_heading">Software Development Intern, <a target="_blank" href="https://www.invenzone.com/">InvenZone</a></h3>
+        <p class="content">
+              I worked on a model for time series forecasting to determine which scientific research topics are trending using data from published academic literature. This was later deployed in production. I also built a machine learning model for classifying images of clothing items from e-commerce website’s catalog.
+        </p>
+    </div>
+    <div class="col-md-3" align="center">
+      <img src="static/img/invenzone.png" width="150px" height="60px">
+      <p>(Dec 2014 - Jan 2015)</p>
+    </div>
+  </div>
+
+  <div class="row project_list">
+    <div class="col-md-9">
+      <h3 class="content_heading">Software Development Intern, <a target="_blank" href="https://www.silverleafcaps.com/">Silverleaf Capital Services</a></h3>
+        <p class="content">
+              I developed a predictive model to predict stock splits in NSE(India) and BSE with over 90% accuracy. I also designed and developed a prototype
+              for stock portfolio management system.
+        </p>
+    </div>
+    <div class="col-md-3" align="center">
+      <img src="static/img/silver_leaf_caps.png" width="150px" height="60px">
+      <p>(June 2014 - Aug 2014)</p>
+    </div>
+  </div>
+
+  <div class="row project_list">
+    <div class="col-md-9">
+      <h3 class="content_heading">Assistant Director, <a target="_blank" href="https://www.iimun.in/">Indian International Model United Nations (IIMUN)</a></h3>
+        <p class="content">
+              I was among the board of directors of IIMUN and in August 2012 we organised Asia's largest youth conference.
+              I lead the coordination council, a team of over 300 fellow students; worked in the marketing and delegate relations departments
+              leading to a 1.5x increase in the total participation and conducted training sessions on speech delivery and MUN skills for hundreds of students.
+        </p>
+    </div>
+    <div class="col-md-3" align="center">
+      <img src="static/img/iimun.png" width="80px" height="140px">
+      <p>(Sept 2012 - Aug 2013)</p>
+    </div>
+  </div>
+
+</div>
