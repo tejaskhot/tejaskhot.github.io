@@ -21,13 +21,13 @@ body { font-family: 'Open Sans', sans-serif; line-height: .8; font-size: 45px; }
     font-style: italic;
     opacity: 0;
     border-radius: 0 0 10px 10px;
-    
+
     -webkit-transition: opacity 2s;
     -moz-transition:    opacity 2s;
     -ms-transition:     opacity 2s;
     -o-transition:      opacity 2s;
     transition:         opacity 2s;
-    
+
     -webkit-transition-delay: 6s;
     -moz-transition-delay: 6s;
     -ms-transition-delay: 6s;
@@ -94,13 +94,13 @@ blockquote .author {
     -ms-box-sizing:     border-box;
     -o-box-sizing:      border-box;
     box-sizing:         border-box;
-    
+
     -webkit-transition: opacity 1s;
     -moz-transition:    opacity 1s;
     -ms-transition:     opacity 1s;
     -o-transition:      opacity 1s;
     transition:         opacity 1s;
-    
+
     text-shadow: rgba(0,0,0,.01) 0 0 1px; /* Chrome @font-face anti-aliasing fix */
 }
 
